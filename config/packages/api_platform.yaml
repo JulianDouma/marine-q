@@ -1,0 +1,23 @@
+api_platform:
+    title: Marine-Q API  
+    version: 0.0.1-alpha
+    defaults:
+        stateless: true
+        cache_headers:
+            vary: ['Content-Type', 'Authorization', 'Origin']
+    # Configure JSON as primary format (must include jsonld for API Platform internals)
+    formats:
+        json: ['application/json']
+        jsonld: ['application/ld+json']
+    # Disable documentation endpoints but keep entrypoint
+    enable_entrypoint: true
+    enable_docs: false
+    enable_swagger_ui: false
+    enable_re_doc: false
+    # Use JSON for patches
+    patch_formats:
+        json: ['application/merge-patch+json']
+    # Enable JSON for documentation endpoints (including entrypoint) - JSON first for priority
+    docs_formats:
+        json: ['application/json']
+        jsonld: ['application/ld+json']

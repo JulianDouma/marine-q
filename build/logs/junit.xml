@@ -1,10 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testsuites>
-  <testsuite name="/Users/juliandouma/Developer/marine-q/phpunit.dist.xml" tests="2" assertions="4" errors="0" failures="0" skipped="0" time="0.003253">
-    <testsuite name="unit" tests="2" assertions="4" errors="0" failures="0" skipped="0" time="0.003253">
-      <testsuite name="App\Tests\Unit\KernelTest" file="/Users/juliandouma/Developer/marine-q/tests/Unit/KernelTest.php" tests="2" assertions="4" errors="0" failures="0" skipped="0" time="0.003253">
-        <testcase name="testKernelInstantiation" file="/Users/juliandouma/Developer/marine-q/tests/Unit/KernelTest.php" line="12" class="App\Tests\Unit\KernelTest" classname="App.Tests.Unit.KernelTest" assertions="3" time="0.002815"/>
-        <testcase name="testKernelDebugMode" file="/Users/juliandouma/Developer/marine-q/tests/Unit/KernelTest.php" line="21" class="App\Tests\Unit\KernelTest" classname="App.Tests.Unit.KernelTest" assertions="1" time="0.000438"/>
+  <testsuite name="/var/www/html/phpunit.dist.xml" tests="8" assertions="25" errors="0" failures="0" skipped="0" time="0.252955">
+    <testsuite name="unit" tests="5" assertions="11" errors="0" failures="0" skipped="0" time="0.150546">
+      <testsuite name="App\Tests\Unit\ApiPlatformConfigTest" file="/var/www/html/tests/Unit/ApiPlatformConfigTest.php" tests="3" assertions="7" errors="0" failures="0" skipped="0" time="0.147731">
+        <testcase name="testApiPlatformBundleIsLoaded" file="/var/www/html/tests/Unit/ApiPlatformConfigTest.php" line="12" class="App\Tests\Unit\ApiPlatformConfigTest" classname="App.Tests.Unit.ApiPlatformConfigTest" assertions="2" time="0.140130"/>
+        <testcase name="testApiPlatformConfigIsLoaded" file="/var/www/html/tests/Unit/ApiPlatformConfigTest.php" line="23" class="App\Tests\Unit\ApiPlatformConfigTest" classname="App.Tests.Unit.ApiPlatformConfigTest" assertions="2" time="0.004655"/>
+        <testcase name="testApiPlatformDefaultConfiguration" file="/var/www/html/tests/Unit/ApiPlatformConfigTest.php" line="33" class="App\Tests\Unit\ApiPlatformConfigTest" classname="App.Tests.Unit.ApiPlatformConfigTest" assertions="3" time="0.002946"/>
+      </testsuite>
+      <testsuite name="App\Tests\Unit\KernelTest" file="/var/www/html/tests/Unit/KernelTest.php" tests="2" assertions="4" errors="0" failures="0" skipped="0" time="0.002815">
+        <testcase name="testKernelInstantiation" file="/var/www/html/tests/Unit/KernelTest.php" line="12" class="App\Tests\Unit\KernelTest" classname="App.Tests.Unit.KernelTest" assertions="3" time="0.001453"/>
+        <testcase name="testKernelDebugMode" file="/var/www/html/tests/Unit/KernelTest.php" line="21" class="App\Tests\Unit\KernelTest" classname="App.Tests.Unit.KernelTest" assertions="1" time="0.001362"/>
+      </testsuite>
+    </testsuite>
+    <testsuite name="integration" tests="3" assertions="14" errors="0" failures="0" skipped="0" time="0.102410">
+      <testsuite name="App\Tests\Integration\ApiPlatformTest" file="/var/www/html/tests/Integration/ApiPlatformTest.php" tests="3" assertions="14" errors="0" failures="0" skipped="0" time="0.102410">
+        <testcase name="testApiPlatformIsAccessible" file="/var/www/html/tests/Integration/ApiPlatformTest.php" line="11" class="App\Tests\Integration\ApiPlatformTest" classname="App.Tests.Integration.ApiPlatformTest" assertions="2" time="0.071572"/>
+        <testcase name="testApiPlatformReturnsValidJsonLD" file="/var/www/html/tests/Integration/ApiPlatformTest.php" line="22" class="App\Tests\Integration\ApiPlatformTest" classname="App.Tests.Integration.ApiPlatformTest" assertions="5" time="0.009323"/>
+        <testcase name="testApiPlatformDocsAreAccessible" file="/var/www/html/tests/Integration/ApiPlatformTest.php" line="39" class="App\Tests\Integration\ApiPlatformTest" classname="App.Tests.Integration.ApiPlatformTest" assertions="7" time="0.021514"/>
       </testsuite>
     </testsuite>
   </testsuite>

@@ -5,6 +5,10 @@ framework:
     # Note that the session will be started ONLY if you read or write from it.
     session: true
 
+    # Enable serializer for API Platform JSON support
+    serializer:
+        enable_attributes: true
+
     #esi: true
     #fragments: true
 

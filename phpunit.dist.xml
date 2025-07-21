@@ -17,6 +17,7 @@
         <server name="SHELL_VERBOSITY" value="-1" />
         <server name="DATABASE_URL" value="sqlite:///%kernel.project_dir%/var/test_%env(TEST_TOKEN)%.db" force="true" />
         <env name="TEST_TOKEN" value="1" force="true" />
+        <env name="XDEBUG_MODE" value="coverage" force="true" />
     </php>
 
     <testsuites>

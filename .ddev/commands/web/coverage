@@ -1,0 +1,21 @@
+#!/bin/bash
+
+## Description: Generate code coverage report
+## Usage: coverage [options]
+## Example: "ddev coverage", "ddev coverage --html"
+
+# Enable Xdebug if not already enabled
+if [ "$XDEBUG_MODE" != "coverage" ]; then
+    echo "Enabling Xdebug coverage mode..."
+    export XDEBUG_MODE=coverage
+fi
+
+# Create directories
+mkdir -p build/logs build/coverage
+
+# Run tests with coverage
+if [ "$1" = "--html" ]; then
+    exec php bin/phpunit --coverage-html=build/coverage "$@"
+else
+    exec php bin/phpunit --coverage-clover=build/logs/clover.xml --coverage-text "$@"
+fi

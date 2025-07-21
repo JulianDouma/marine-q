@@ -1,0 +1,8 @@
+#!/bin/bash
+
+## Description: Run Deptrac architecture analysis
+## Usage: deptrac
+## Example: "ddev deptrac"
+
+echo "🏗️ Running architecture analysis..."
+composer deptrac

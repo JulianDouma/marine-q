@@ -1,0 +1,10 @@
+#!/bin/bash
+
+## Description: Run tests in parallel using ParaTest
+## Usage: test-parallel [options]
+## Example: "ddev test-parallel", "ddev test-parallel --processes=4"
+
+# Default to 4 processes if not specified
+PROCESSES=${PARATEST_PROCESSES:-4}
+
+exec vendor/bin/paratest --processes=$PROCESSES "$@"

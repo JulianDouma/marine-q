@@ -1,0 +1,7 @@
+#!/bin/bash
+
+## Description: Run only unit tests
+## Usage: test-unit [options]
+## Example: "ddev test-unit", "ddev test-unit --filter=KernelTest"
+
+exec php bin/phpunit --testsuite=unit "$@"

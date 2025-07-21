@@ -1,0 +1,13 @@
+#!/bin/bash
+
+## Description: Run Rector for code modernization
+## Usage: rector [fix]
+## Example: "ddev rector" (dry-run) or "ddev rector fix"
+
+if [ "$1" = "fix" ]; then
+    echo "🔧 Running Rector refactoring..."
+    composer rector
+else
+    echo "🔍 Checking Rector suggestions (dry-run)..."
+    composer rector:dry
+fi

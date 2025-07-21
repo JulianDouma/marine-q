@@ -1,0 +1,40 @@
+deptrac:
+  paths:
+    - ./src
+    - ./tests
+  exclude_files:
+    - '#.*test.*#'
+    - '#.*Test.*#'
+  layers:
+    # Application Layer (controllers, commands, etc)  
+    - name: Application
+      collectors:
+        - type: directory
+          value: src/Controller
+        - type: directory
+          value: src/Command
+    
+    # Domain Layer (business logic, entities)
+    - name: Domain
+      collectors:
+        - type: directory
+          value: src/Entity
+    
+    # Symfony Framework Layer
+    - name: Symfony
+      collectors:
+        - type: class
+          value: App\Kernel
+  
+  ruleset:
+    # Domain layer rules (most restrictive)
+    Domain:
+      - Symfony
+      - Domain
+    
+    # Application layer rules
+    Application:
+      - Symfony
+      - Domain
+      - Application
+

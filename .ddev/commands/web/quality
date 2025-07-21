@@ -1,0 +1,13 @@
+#!/bin/bash
+
+## Description: Run all code quality checks
+## Usage: quality [dry-run]
+## Example: "ddev quality" or "ddev quality dry-run"
+
+if [ "$1" = "dry-run" ]; then
+    echo "🔍 Running code quality checks (dry-run mode)..."
+    composer quality
+else
+    echo "🔧 Running code quality checks and fixes..."
+    composer quality:fix
+fi

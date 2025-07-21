@@ -1,0 +1,7 @@
+#!/bin/bash
+
+## Description: Run only integration tests
+## Usage: test-integration [options]
+## Example: "ddev test-integration"
+
+exec php bin/phpunit --testsuite=integration "$@"

@@ -1,0 +1,12 @@
+# Application Tests (Functional)
+
+This directory contains functional tests that test complete features/workflows.
+
+## Guidelines
+- Test complete application features
+- HTTP requests/responses testing
+- Symfony WebTestCase usage
+- Slower execution (< 5s per test)
+- Fewer tests than integration/unit
+- Full application stack testing
+- Database fixtures and cleanup

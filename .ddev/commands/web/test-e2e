@@ -1,0 +1,7 @@
+#!/bin/bash
+
+## Description: Run only E2E tests
+## Usage: test-e2e [options]
+## Example: "ddev test-e2e"
+
+exec php bin/phpunit --testsuite=e2e "$@"

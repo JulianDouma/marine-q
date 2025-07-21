@@ -1,0 +1,63 @@
+grumphp:
+    stop_on_failure: false
+    ignore_unstaged_changes: false
+    hide_circumvention_tip: false
+    process_timeout: 120
+    ascii:
+        failed: ~
+        succeeded: ~
+    parallel:
+        enabled: true
+        max_workers: 32
+    fixer:
+        enabled: true
+        fix_by_default: false
+    tasks:
+        git_commit_message:
+            matchers:
+                - '/^(feat|fix|docs|style|refactor|test|chore|build|ci|perf)(\(.+\))?: .+/'
+            case_insensitive: false
+            multiline: true
+            additional_modifiers: ''
+            max_subject_width: 72
+            max_body_width: 72
+            enforce_capitalized_subject: false
+            enforce_no_subject_punctuations: false
+            enforce_single_lined_subject: true
+            type_scope_conventions: []
+        
+        
+        phpcsfixer2:
+            allow_risky: false
+            cache_file: .php-cs-fixer.cache
+            config: .php-cs-fixer.dist.php
+            rules: []
+            using_cache: true
+            verbose: true
+            diff: true
+            triggered_by: ['php']
+        
+        phpstan:
+            autoload_file: ~
+            configuration: phpstan.neon.dist
+            level: ~
+            force_patterns: []
+            ignore_patterns: []
+            triggered_by: ['php']
+            memory_limit: "1G"
+        
+        rector:
+            config: rector.php
+            clear_cache: false
+            no_diffs: false
+            triggered_by: ['php']
+        
+        deptrac:
+            depfile: deptrac.yaml
+            formatter: ~
+        
+        phpunit:
+            config_file: phpunit.dist.xml
+            testsuite: ~
+            group: []
+            always_execute: false

@@ -1,0 +1,13 @@
+#!/bin/bash
+
+## Description: Run PHPStan static analysis
+## Usage: phpstan [baseline]
+## Example: "ddev phpstan" or "ddev phpstan baseline"
+
+if [ "$1" = "baseline" ]; then
+    echo "📊 Generating PHPStan baseline..."
+    composer phpstan:baseline
+else
+    echo "🔍 Running PHPStan analysis..."
+    composer phpstan
+fi

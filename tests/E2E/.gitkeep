@@ -1,0 +1,12 @@
+# End-to-End Tests
+
+This directory contains E2E tests that simulate real user interactions.
+
+## Guidelines
+- Test critical user journeys only
+- Real browser automation (Symfony Panther)
+- Slowest execution (> 5s per test)
+- Minimal number of tests (top of pyramid)
+- Full system integration testing
+- JavaScript and UI interaction testing
+- External services integration

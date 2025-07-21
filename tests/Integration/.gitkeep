@@ -1,0 +1,11 @@
+# Integration Tests
+
+This directory contains integration tests that test how components work together.
+
+## Guidelines
+- Test multiple components working together
+- Use real services but controlled environment
+- Medium execution time (< 1s per test)
+- Moderate number of tests
+- May use database with transactions (DAMA bundle)
+- Test service container integration

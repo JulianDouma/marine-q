@@ -1,0 +1,8 @@
+#!/bin/bash
+
+## Description: Run PHPUnit tests
+## Usage: test [options]
+## Example: "ddev test", "ddev test --group=unit", "ddev test --testsuite=unit"
+
+# Run PHPUnit with any passed arguments
+exec php bin/phpunit "$@"

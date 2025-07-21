@@ -1,0 +1,10 @@
+# Unit Tests
+
+This directory contains unit tests that test individual components in isolation.
+
+## Guidelines
+- Test single classes or functions
+- Mock all dependencies  
+- Fast execution (< 100ms per test)
+- Many tests (should form the base of the testing pyramid)
+- No database, network, or filesystem access

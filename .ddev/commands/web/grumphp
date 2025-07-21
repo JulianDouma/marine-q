@@ -1,0 +1,24 @@
+#!/bin/bash
+
+## Description: Run GrumPHP quality checks
+## Usage: grumphp [run|git:pre-commit|git:commit-msg]
+## Example: "ddev grumphp" (default run) or "ddev grumphp git:pre-commit"
+
+case "$1" in
+    "git:pre-commit")
+        echo "🔍 Running GrumPHP pre-commit checks..."
+        vendor/bin/grumphp git:pre-commit
+        ;;
+    "git:commit-msg")
+        echo "📝 Running GrumPHP commit message validation..."
+        vendor/bin/grumphp git:commit-msg "$2"
+        ;;
+    "run"|"")
+        echo "🔧 Running all GrumPHP tasks..."
+        vendor/bin/grumphp run
+        ;;
+    *)
+        echo "📋 Running GrumPHP with custom arguments: $*"
+        vendor/bin/grumphp "$@"
+        ;;
+esac

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="/Users/juliandouma/Developer/marine-q/phpunit.dist.xml" tests="2" assertions="4" errors="0" failures="0" skipped="0" time="0.003253">
+    <testsuite name="unit" tests="2" assertions="4" errors="0" failures="0" skipped="0" time="0.003253">
+      <testsuite name="App\Tests\Unit\KernelTest" file="/Users/juliandouma/Developer/marine-q/tests/Unit/KernelTest.php" tests="2" assertions="4" errors="0" failures="0" skipped="0" time="0.003253">
+        <testcase name="testKernelInstantiation" file="/Users/juliandouma/Developer/marine-q/tests/Unit/KernelTest.php" line="12" class="App\Tests\Unit\KernelTest" classname="App.Tests.Unit.KernelTest" assertions="3" time="0.002815"/>
+        <testcase name="testKernelDebugMode" file="/Users/juliandouma/Developer/marine-q/tests/Unit/KernelTest.php" line="21" class="App\Tests\Unit\KernelTest" classname="App.Tests.Unit.KernelTest" assertions="1" time="0.000438"/>
+      </testsuite>
+    </testsuite>
+  </testsuite>
+</testsuites>
